@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load crispy_forms_tags %}
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div>
+      <img src="{{user.profile.image.url}}">
+      <p>{{user.username}}</p>
+      <p>{{user.email}}</p>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+     {{update_form|crispy}}
+     {{profile_update_form|crispy}}
+     <button type="submit">Update</button>
+ </form>
+
+</body>
+</html>
