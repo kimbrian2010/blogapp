@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="{% static 'blogapp/styles.css' %}">
+    <title>Base</title>
+</head>
+<body>
+   <div class="wrapper">
+       <nav class="nav-bar">
+           <div class="logo">
+               <h1> THOUGHTS</h1>
+           </div>
+           <div class="nav-menu">
+               <ul class="nav-menu-list">
+                   <li><a href="#">Sign in</a></li>
+                   <li><a href="#">Sign out</a></li>
+                   <li><a href="#">Sign up</a></li>
+               </ul>
+           </div>
+       </nav>
+
+       <aside class="side-nav">
+           <div class="nav-ul">
+               <ul class="side-bar-ul">
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">Profile</a></li>
+                   <li><a href="#">Notifications</a></li>
+                   <li><a href="#">Messages</a></li>
+               </ul>
+
+           </div>
+
+           <div>
+               
+           </div>
+
+       </aside>
+
+       <main class="main-content">
+           {% block content  %}
+           {% endblock  %}
+       </main>
+
+       <section class="side-content">
+           
+       </section>
+
+   </div>
+
+</body>
+</html>

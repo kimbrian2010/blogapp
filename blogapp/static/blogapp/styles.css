@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    background: #28282B;
+    color: white;
+    font-family: sans-serif;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "navbar navbar navbar" "sidenav main aside";
+}
+
+nav {
+    grid-area: navbar;
+}
+
+aside {
+    grid-area: sidenav;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    grid-area: aside;
+}
+
+.nav-bar {
+    display: flex;
+    background: #28282B;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 4px 6px;
+    border: #5a5c5a 1px solid;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    color: rgb(247, 247, 252);
+    background: #5a5c5a;
+    border: rgb(182, 179, 179) 1px solid;
+    border-radius: 5px;
+}
+
+.nav-menu li {
+    text-decoration: none;
+    color: white;
+    padding: 4px 6px;
+    margin: 5px;
+}
+
+.nav-menu-list {
+    list-style: none;
+    display: flex;
+}
+
+.side-nav {
+    background: #28282B;
+    padding-top: 50px;
+}
+
+.side-bar-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-bar-ul li {
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.side-bar-ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-ul {
+    padding-left: 60px;
+}
+
+.main-content {
+    background: #28282B;
+}
+
+.post-card {
+    display: flex;
+    padding: 20px;
+    font-size: 13px;
+    gap: 8px;
+    align-items: center;
+    border: gray 1px solid;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.post-card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.side-content {
+    background: #28282B;
+}

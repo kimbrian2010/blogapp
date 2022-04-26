@@ -11,9 +11,9 @@ def account(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}. You can now login')
-            return redirect('login')
+        return redirect('login')
     else:
-        form = UserRegisterForm
+        form = UserRegisterForm()
     return render(request, 'accounts/register.html', {'form': form})
 
 
@@ -26,7 +26,7 @@ def profile(request):
 def edit_profile(request):
     if request.method == "POST":
         update_form = UserUpdateForm(request.POST, instance=request.user)
-        profile_update_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        profile_update_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile) #removed request.FILE
         if update_form.is_valid() and profile_update_form.is_valid():
             update_form.save()
             profile_update_form.save()
