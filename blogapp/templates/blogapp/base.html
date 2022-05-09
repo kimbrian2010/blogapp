@@ -1,10 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     
-    <link rel="stylesheet" href="{% static 'blogapp/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/blogapp/styles.css' %}">
     <title>Base</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                <ul class="nav-menu-list">
                    <li><a href="#">Sign in</a></li>
                    <li><a href="#">Sign out</a></li>
-                   <li><a href="#">Sign up</a></li>
+                   <li><a href="#" class="sign-up">Sign up</a></li>
                </ul>
            </div>
        </nav>
@@ -30,13 +30,7 @@
                    <li><a href="#">Notifications</a></li>
                    <li><a href="#">Messages</a></li>
                </ul>
-
            </div>
-
-           <div>
-               
-           </div>
-
        </aside>
 
        <main class="main-content">
@@ -45,6 +39,9 @@
        </main>
 
        <section class="side-content">
+           <div class="thought-img">
+               <img src= " {% static '/blogapp/lightning-thought.jpg' %}">
+           </div>
            
        </section>
 

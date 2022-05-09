@@ -4,12 +4,15 @@
     margin: 0;
 }
 
+
+/*LAYOUT*/
+
 .wrapper {
     display: grid;
     background: #28282B;
     color: white;
     font-family: sans-serif;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 60px auto;
     grid-template-areas: "navbar navbar navbar" "sidenav main aside";
 }
@@ -32,11 +35,14 @@ section {
 
 .nav-bar {
     display: flex;
-    background: #28282B;
+    background: #212121;
     justify-content: space-between;
     align-items: center;
     padding: 0px 60px;
 }
+
+
+/*components*/
 
 .nav-menu a {
     text-decoration: none;
@@ -65,9 +71,19 @@ section {
     display: flex;
 }
 
+.sign-up {
+    background: #424242;
+    /*background: #1e1e1f;*/
+}
+
+.sign-up :hover {
+    border: white;
+}
+
 .side-nav {
-    background: #28282B;
+    background: #212121;
     padding-top: 50px;
+    margin: 15px;
 }
 
 .side-bar-ul {
@@ -83,10 +99,21 @@ section {
 .side-bar-ul a {
     text-decoration: none;
     color: white;
+    padding: 6px 10px;
+    border: #5a5c5a 1px solid;
+    display: flex;
+    border-radius: 25px;
+}
+
+.side-bar-ul a:hover {
+    background: #28282B;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
 }
 
 .nav-ul {
-    padding-left: 60px;
+    margin: 0px 60px
 }
 
 .main-content {
@@ -95,11 +122,11 @@ section {
 
 .post-card {
     display: flex;
+    background: #424242;
     padding: 20px;
     font-size: 13px;
     gap: 8px;
     align-items: center;
-    border: gray 1px solid;
     margin-top: 15px;
     margin-bottom: 5px;
     border-radius: 15px;
@@ -111,6 +138,21 @@ section {
     border-radius: 50%;
 }
 
+.user-name {
+    text-decoration: none;
+    color: #aaaaaf;
+}
+
 .side-content {
     background: #28282B;
+}
+
+.thought-img {
+    background: #28282B;
+    margin: 15px;
+}
+
+.thought-img img {
+    height: 300px;
+    width: 300px;
 }
