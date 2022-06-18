@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load crispy_forms_tags %}
-    <meta charset="UTF-8">
-    <title>Log In Page</title>
-</head>
-<body>
+{% extends '../blogapp/index.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block right %}
+  <div class="login-content">
+
     <div class="message">
          {% if messages %}
            {% for message in messages %}
              {{message}}
            {% endfor %}
          {% endif %}
-     </div>
+    </div>
+    <div  class="form-content">
+      <form method="POST" >
+       {% csrf_token %}
+          <div><h4>Log in to Thoughts</h4></div>
+       {{form|crispy}}
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+      <small>Need an account? <a href="{% url 'account'%}"> Sign up</a></small>
+    </div>
 
-    <form method="POST" >
-     {% csrf_token %}
-        <div><h4>Log in</h4></div>
-     {{form|crispy}}
-     <button type="submit">Sign In</button>
-    </form>
-    <small>Need an account? <a href="{% url 'account'%}"> Sign up</a></small>
-
-</body>
-</html>
+  </div>
+{% endblock %}
