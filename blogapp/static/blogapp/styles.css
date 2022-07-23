@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+body {
+    background: #424242;
+}
+
 
 /*LAYOUT*/
 
@@ -13,8 +17,12 @@
     color: white;
     font-family: sans-serif;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 60px auto;
+    /*grid-template-rows: 100vh;*/
     grid-template-areas: "navbar navbar navbar" "sidenav main aside";
+}
+
+.nav-bar {
+    height: 60px;
 }
 
 nav {

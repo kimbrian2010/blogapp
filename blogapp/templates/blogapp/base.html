@@ -15,7 +15,7 @@
            </div>
            <div class="nav-menu">
                <ul class="nav-menu-list">
-                   <li><a href="{% url 'logout' %}">Sign out</a></li>
+                   <li><a href="{% url 'logout' %}">Sign out</a></li> 
                </ul>
            </div>
        </nav>
@@ -23,8 +23,8 @@
        <aside class="side-nav">
            <div class="nav-ul">
                <ul class="side-bar-ul">
-                   <li><a href="/">Home</a></li>
-                   <li><a href="{% url 'profile'%}">Profile</a></li>
+                   <li><a href="{% url 'blog-home' %}">Home</a></li>
+                   <li><a href="{% url 'profile' %}">Profile</a></li>
                    <li><a href="#">Notifications</a></li>
                    <li><a href="#">Messages</a></li>
                </ul>

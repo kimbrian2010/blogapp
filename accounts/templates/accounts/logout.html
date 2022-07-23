@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Log Out Page</title>
-</head>
-<body>
-    <h3>You have been logged out</h3>
-    <small><a href="{% url 'login'%}"> Log in again</a></small>
-</body>
-</html>
+
+{% extends '../blogapp/index.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block right %}
+
+   <div class="logout-cls">
+     <h3>You have been logged out</h3>
+     <small><a href="{% url 'login'%}"> Log in again</a></small>
+   </div>
+
+{% endblock %}
